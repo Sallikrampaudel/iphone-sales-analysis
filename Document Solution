@@ -1,0 +1,27 @@
+
+Prepare comprehensive documentation detailing the usage, functionality, and deployment instructions for each utility.
+
+Utility Documentation: 
+  1) sales_data_collector_api
+      Introduction:  The sales_data_collector_api consumes sales data from a CSV file, processes it, and publishes it into a partitioned Hive table. 
+      This utility is useful for organizing and analyzing sales data over time, partitioned by sale date.
+
+      Functionality:   
+        Input: A CSV file containing sales data.
+        Processing: Reads the data from the CSV file into a PySpark DataFrame and partitions it by sale_date.
+        Output: Publishes the processed data into a Hive table partitioned by sale_date.
+  2) product_data_collector_api
+      Intr0duction: The product_data_collector_api is a Python function that consumes data from a Parquet file, processes it, and publishes it into a non-partitioned Hive table.
+      This utility is designed for scenarios where product data needs to be stored in Hive for further analysis or reporting purposes.
+     
+      Functionality:   
+        Input: A Parquet file containing product data.
+        Processing: Reads the data from the Parquet file into a PySpark DataFrame.
+        Output: Publishes the processed data into a non-partitioned Hive table in Parquet format.
+
+Local Deployement: 
+  -Install Apache Spark
+  -Setup Hive
+  -Run Command to submit program to pyspark
+    Example :  spark-submit product_data_collector_api.py
+
